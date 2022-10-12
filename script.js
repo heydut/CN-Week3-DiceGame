@@ -25,6 +25,9 @@ button.addEventListener("click", () => {
   console.log(number);
 });
 
+let numbers = 0;
+let number2 = 0;
+let num = 0;
 // let img = document.querySelector(".dice1");
 // let button = document.querySelector(".button");
 // let score = document.querySelector(".score-result").innerText;
