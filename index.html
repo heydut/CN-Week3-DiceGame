@@ -8,6 +8,40 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <section id="dice">
+      <div class="dice-box">
+        <div class="dice">
+          <img src="imgs/dice1.png" class="dice1" />
+          <img src="imgs/dice2.png" class="dice2" />
+          <img src="imgs/dice3.png" class="dice3" />
+          <img src="imgs/dice4.png" class="dice4" />
+          <img src="imgs/dice5.png" class="dice5" />
+          <img src="imgs/dice6.png" class="dice6" />
+        </div>
+        <div class="score">
+          <div class="instructions">
+            <h2>
+              Roll the dice to begin the game. Once the score passes 20, you win
+              but however, if you hit "1" then you lose.
+            </h2>
+          </div>
+          <div class="your-score">
+            <h1>Your score:</h1>
+            <h4 class="score-result">0</h4>
+          </div>
+          <div class="rolls">
+            <h1>Rolls:</h1>
+            <h4 class="rolls-result">0</h4>
+          </div>
+          <div class="wins">
+            <h1>Wins:</h1>
+            <h4 class="wins-result">0</h4>
+          </div>
+        </div>
+        <button class="button">Roll</button>
+        <button class="restart-button">Restart</button>
+      </div>
+    </section>
     <script src="script.js"></script>
   </body>
 </html>

@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  display: flex;
+  align-items: center;
+
+  background: linear-gradient(45deg, #eeeeee, #faf8f9, #ffffff);
+  font-family: "Poppins", sans-serif;
+
+  margin: 0px;
+  padding: 0px;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+#dice .dice-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 100vw;
+
+  text-align: center;
+}
+
+#dice .dice img {
+  width: 150px;
+}
+
+.dice2,
+.dice3,
+.dice4,
+.dice5,
+.dice6 {
+  display: none;
+}
+
+.button {
+  display: block;
+}
+.restart-button {
+  display: none;
+}
