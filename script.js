@@ -3,6 +3,7 @@ let button = document.querySelector(".button");
 let scoreNumber = document.querySelector(".score-result");
 let rollsNumber = document.querySelector(".rolls-result");
 let winsNumber = document.querySelector(".wins-result");
+let loseMsg = document.querySelector(".lose");
 
 let score = 0;
 let rolls = 0;
@@ -11,64 +12,33 @@ let wins = 0;
 button.addEventListener("click", () => {
   let number = Math.floor(Math.random() * 6 + 1);
 
-  if (
-    number === 6 ||
-    number === 5 ||
-    number === 4 ||
-    number === 3 ||
-    number === 2 ||
-    number === 1
-  ) {
+  if (number === 1) {
     img.src = `imgs/dice${number}.png`;
+    score = 0;
+    rolls = 0;
+    loseMsg.style.visibility = "visible";
+    button.innerText = "Do you want to restart?";
+  } else {
+    img.src = `imgs/dice${number}.png`;
+    score += number;
+    rolls++;
+    loseMsg.style.visibility = "hidden";
+    button.innerText = "Roll again";
   }
 
-  console.log(number);
+  if (score >= 20) {
+    wins++;
+    loseMsg.style.visibility = "visible";
+    loseMsg.innerText = "Yay! You won!";
+    button.innerText = "Do you want to restart?";
+    score = 0;
+    rolls = 0;
+  }
+
+  winsNumber.innerText = wins;
+  rollsNumber.innerText = rolls;
+  scoreNumber.innerText = score;
+  wins.innerText = wins;
+
+  console.log(score);
 });
-
-let numbers = 0;
-let number2 = 0;
-let num = 0;
-// let img = document.querySelector(".dice1");
-// let button = document.querySelector(".button");
-// let score = document.querySelector(".score-result").innerText;
-// let rolls = document.querySelector(".rolls-result").innerText;
-// let wins = document.querySelector(".wins-result").innerText;
-// let newScore = parseInt(score, 10);
-// let newRolls = parseInt(rolls, 10);
-// let winner = parseInt(wins, 10);
-
-// button.addEventListener("click", () => {
-//   let number = Math.floor(Math.random() * 6 + 1);
-
-//   if (
-//     number === 6 ||
-//     number === 5 ||
-//     number === 4 ||
-//     number === 3 ||
-//     number === 2
-//   ) {
-//     img.src = `imgs/dice${number}.png`;
-//     newScore += number;
-//     newRolls += 1;
-//     button.innerText = "Roll";
-//   } else if (number === 1) {
-//     img.src = `imgs/dice${number}.png`;
-//     newScore = 0;
-//     newRolls = 0;
-//     button.innerText = "Restart";
-//   }
-
-//   if (newScore >= 20) {
-//     winner += 1;
-//     newScore = 0;
-//     newRolls = 0;
-//     document.querySelector(".your-score").style.display = "none";
-//     document.querySelector(".rolls").style.display = "none";
-//     button.innerText = "Restart";
-//   }
-
-//   document.querySelector(".wins-result").innerText = winner;
-//   document.querySelector(".score-result").innerText = newScore;
-//   document.querySelector(".rolls-result").innerText = newRolls;
-//   console.log(newScore);
-// });

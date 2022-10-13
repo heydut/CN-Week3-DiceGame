@@ -29,17 +29,6 @@ body {
   width: 150px;
 }
 
-.dice2,
-.dice3,
-.dice4,
-.dice5,
-.dice6 {
-  display: none;
-}
-
-.button {
-  display: block;
-}
-.restart-button {
-  display: none;
+.lose {
+  visibility: hidden;
 }
