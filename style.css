@@ -1,34 +1,171 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   display: flex;
   align-items: center;
 
-  background: linear-gradient(45deg, #eeeeee, #faf8f9, #ffffff);
+  background: linear-gradient(45deg, #f51166, #fc9ec1);
+  background-repeat: no-repeat;
+  background-size: 400% 400%;
+  color: #fff;
   font-family: "Poppins", sans-serif;
 
   margin: 0px;
   padding: 0px;
+}
+
+#dice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   height: 100vh;
   width: 100vw;
 }
 
 #dice .dice-box {
+  border-radius: 25px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: auto;
-  width: 100vw;
-
   text-align: center;
+
+  margin: 10%;
+  padding: 30px;
 }
 
 #dice .dice img {
+  border-radius: 25px;
   width: 150px;
+  padding: 15px;
+}
+
+.score {
+  margin: 25px 25px;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.3);
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
 }
 
 .lose {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
   visibility: hidden;
+}
+.numbers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.your-score,
+.rolls,
+.wins {
+  border-radius: 15px;
+
+  margin: 25px;
+  height: auto;
+  width: 175px;
+}
+
+#dice .dice-box .score h2 {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+}
+
+#dice .dice-box .score .instructions {
+  margin: 30px 40px;
+}
+
+#dice .dice-box .numbers h1 {
+  margin: 10px;
+}
+
+#dice .dice-box .numbers h4 {
+  margin: 20px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+#dice .dice-box .numbers hr {
+  border: 0px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+#dice .dice-box button {
+  border-radius: 25px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 30px;
+  padding: 10px 25px;
+}
+
+#dice .dice-box button:hover {
+  background-color: #fff;
+  color: #f51166;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.restartButton {
+  display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  #dice .dice-box {
+    margin: 20% 10%;
+  }
+
+  #dice .dice img {
+    width: 125px;
+  }
+
+  #dice .dice-box .score h2 {
+    font-size: 20px;
+  }
+
+  #dice .dice-box .score .instructions {
+    margin: 15px 20px;
+  }
+
+  .your-score,
+  .rolls,
+  .wins {
+    margin: 10px;
+    width: 125px;
+  }
+
+  #dice .dice-box .numbers h1,
+  #dice .dice-box .numbers h4 {
+    font-size: 18px;
+  }
+
+  .lose {
+    font-size: 20px;
+  }
+
+  #dice .dice-box {
+    padding: 15px;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  #dice .dice img {
+    width: 100px;
+  }
 }

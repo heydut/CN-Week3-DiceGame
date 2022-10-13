@@ -1,5 +1,6 @@
 let img = document.querySelector(".dice1");
 let button = document.querySelector(".button");
+let restartButton = document.querySelector(".restartButton");
 let scoreNumber = document.querySelector(".score-result");
 let rollsNumber = document.querySelector(".rolls-result");
 let winsNumber = document.querySelector(".wins-result");
@@ -14,31 +15,35 @@ button.addEventListener("click", () => {
 
   if (number === 1) {
     img.src = `imgs/dice${number}.png`;
-    score = 0;
-    rolls = 0;
     loseMsg.style.visibility = "visible";
-    button.innerText = "Do you want to restart?";
+    button.style.display = "none";
+    restartButton.style.display = "block";
   } else {
     img.src = `imgs/dice${number}.png`;
     score += number;
     rolls++;
     loseMsg.style.visibility = "hidden";
-    button.innerText = "Roll again";
   }
 
   if (score >= 20) {
     wins++;
     loseMsg.style.visibility = "visible";
     loseMsg.innerText = "Yay! You won!";
-    button.innerText = "Do you want to restart?";
-    score = 0;
-    rolls = 0;
+    button.style.display = "none";
+    restartButton.style.display = "block";
   }
 
   winsNumber.innerText = wins;
   rollsNumber.innerText = rolls;
   scoreNumber.innerText = score;
-  wins.innerText = wins;
+});
 
-  console.log(score);
+restartButton.addEventListener("click", () => {
+  button.style.display = "block";
+  loseMsg.style.visibility = "hidden";
+  restartButton.style.display = "none";
+  score = 0;
+  rolls = 0;
+  rollsNumber.innerText = rolls;
+  scoreNumber.innerText = score;
 });

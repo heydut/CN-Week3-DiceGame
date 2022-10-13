@@ -9,32 +9,39 @@
   </head>
   <body>
     <section id="dice">
-      <div class="dice-box">
+      <div class="dice-box glass">
         <div class="dice">
-          <img src="imgs/dice1.png" class="dice1" />
+          <img src="imgs/dice1.png" class="dice1 glass" />
         </div>
         <div class="score">
           <div class="instructions">
+            <h2>Instructions:</h2>
             <h2>
-              Roll the dice to begin the game. Once the score passes 20, you win
-              but however, if you hit "1" then you lose.
+              Roll the dice to begin the game. Once the score passes 20, you
+              win! However, if you hit "1" then you lose.
             </h2>
           </div>
-          <div class="your-score">
-            <h1>Your score:</h1>
-            <h4 class="score-result">0</h4>
-          </div>
-          <div class="rolls">
-            <h1>Rolls:</h1>
-            <h4 class="rolls-result">0</h4>
-          </div>
-          <div class="wins">
-            <h1>Wins:</h1>
-            <h4 class="wins-result">0</h4>
+          <div class="numbers">
+            <div class="your-score glass">
+              <h1>Your score:</h1>
+              <hr />
+              <h4 class="score-result">0</h4>
+            </div>
+            <div class="rolls glass">
+              <h1>Rolls:</h1>
+              <hr />
+              <h4 class="rolls-result">0</h4>
+            </div>
+            <div class="wins glass">
+              <h1>Wins:</h1>
+              <hr />
+              <h4 class="wins-result">0</h4>
+            </div>
           </div>
         </div>
         <div class="lose">Oh, no! You hit number 1 and lost! :(</div>
-        <button class="button">Roll</button>
+        <button class="button glass">Roll</button>
+        <button class="restartButton glass">Restart</button>
       </div>
     </section>
     <script src="script.js"></script>
