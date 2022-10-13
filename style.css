@@ -135,7 +135,8 @@ body {
     width: 125px;
   }
 
-  #dice .dice-box .score h2 {
+  #dice .dice-box .score h2,
+  .lose {
     font-size: 20px;
   }
 
@@ -155,10 +156,6 @@ body {
     font-size: 18px;
   }
 
-  .lose {
-    font-size: 20px;
-  }
-
   #dice .dice-box {
     padding: 15px;
   }
@@ -167,5 +164,46 @@ body {
 @media only screen and (max-width: 660px) {
   #dice .dice img {
     width: 100px;
+  }
+
+  #dice .dice-box {
+    margin: 0px 25px;
+    padding: 10px;
+  }
+
+  .score {
+    margin: 15px 15px;
+  }
+
+  #dice .dice-box .score h2 {
+    margin-bottom: 10px;
+  }
+
+  #dice .dice-box .score h2,
+  .lose {
+    font-size: 16px;
+  }
+
+  #dice .dice-box .score .instructions {
+    margin: 5px 10px;
+  }
+
+  .your-score,
+  .rolls,
+  .wins {
+    margin: 5px;
+    width: 100px;
+  }
+
+  #dice .dice-box button {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+
+  #dice .dice-box .numbers h1,
+  #dice .dice-box .numbers h4 {
+    font-size: 14px;
+    margin: 5px;
   }
 }
